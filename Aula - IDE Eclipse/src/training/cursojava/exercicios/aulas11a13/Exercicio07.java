@@ -11,7 +11,8 @@ public class Exercicio07 {
 		double lado = scan.nextDouble();
 		
 		double area = Math.pow(lado, 2);
-		System.out.println("Dblo da area: "+(area *2));
+		System.out.println("Area: "+area);
+		System.out.println("Dobro da area: "+(area *2));
 
 	}
 
