@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Exercicio01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in) ;
 		System.out.println("Valor1: ");
 		double valor1 = scan.nextDouble();
@@ -14,7 +13,8 @@ public class Exercicio01 {
 		
 		if (valor1 > valor2) {
 			System.out.println(valor1);
-		}if (valor1 < valor2) {
+		}
+		else if (valor1 < valor2) {
 			System.out.println(valor2);			
 		}
 		else {

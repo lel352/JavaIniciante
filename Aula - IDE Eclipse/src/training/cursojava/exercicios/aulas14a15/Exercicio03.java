@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class Exercicio03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in) ;
 		System.out.println("Sexo: ");
 		String sexo = scan.nextLine();
 		
-		if (sexo.toUpperCase().equals("F")) {
+		if (sexo.equalsIgnoreCase("F")) {
 			System.out.println("Feminino");
 		}
-		else if (sexo.toUpperCase().equals("M")) {
+		else if (sexo.equalsIgnoreCase("M")) {
 			System.out.println("Masculino");
 		}
 		else {

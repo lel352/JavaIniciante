@@ -6,46 +6,23 @@ public class Exercicio10 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in) ;
-		System.out.println("Valor Produto1: ");
-		int valor1 = scan.nextInt();
-		System.out.println("Valor Produto2: ");
-		int valor2 = scan.nextInt();
-		System.out.println("Valor Produto3: ");
-		int valor3 = scan.nextInt();
+		System.out.println("Turno estuda: ");
+		String turno = scan.nextLine();
 		
-	
-		if ((valor1 < valor2) && (valor1 < valor3)){
-			System.out.println(valor1);
-			if (valor2 < valor3) {
-				System.out.println(valor2);
-				System.out.println(valor3);
-			}				
-			else {
-				System.out.println(valor3);
-				System.out.println(valor2);				
-			}	
-		}else if ((valor2 < valor1) && (valor2 < valor3)){
-			System.out.println(valor2);
-			if (valor1 < valor3) {
-				System.out.println(valor1);
-				System.out.println(valor3);
-			}				
-			else {
-				System.out.println(valor3);
-				System.out.println(valor1);				
-			}
-			    
-		}else{
-			System.out.println(valor3);
-			if (valor2 < valor1) {
-				System.out.println(valor2);
-				System.out.println(valor1);				
-			}
-				
-			else {
-				System.out.println(valor1);
-				System.out.println(valor2);
-			}	
+		switch (turno.toUpperCase()) {
+		case "M":
+			System.out.println("Bom dia!");
+			break;
+		case "V":
+			System.out.println("Boa tarde!");
+			break;
+		case "N":
+			System.out.println("Bom Noite!");
+			break;
+
+		default:
+			System.out.println("Valor inválido!");
+			break;
 		}
 	}
 

@@ -10,6 +10,7 @@ public class Exercicio14 {
 		double nota1 = scan.nextDouble();
 		System.out.println("Nota2: ");
 		double nota2 = scan.nextDouble();
+		char aproveitamento;
 		
 		
 		System.out.println("Nota1 "+nota1);
@@ -18,15 +19,29 @@ public class Exercicio14 {
 		double media  = (nota1 + nota2) /2;
 		System.out.println("Media "+media);
 		if (media >= 9) 
-			System.out.println("A - Aprovado ");
+			aproveitamento = 'A';
 		else if (media >= 7.5)
-			System.out.println("B - Aprovado");
+			aproveitamento = 'B';
 		else if	(media >= 6)
-			System.out.println("C - Aprovado");
+			aproveitamento = 'C';
 		else if	(media >= 4)
-			System.out.println("D - Reprovado");
+			aproveitamento = 'D';
 		else 
-			System.out.println("E - Reprovado");		
+			aproveitamento = 'E';
+		
+		System.out.println("Conceito "+aproveitamento);
+		switch (aproveitamento) {
+		case 'A':
+		case 'B':
+		case 'C':
+			System.out.println("Aprovado");
+			break;
+		case 'D':
+		case 'E':
+			System.out.println("Reprovado");
+			break;
+		}
+		
 	}
 
 }
