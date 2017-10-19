@@ -11,8 +11,8 @@ public class Exercicio04 {
 		System.out.println(" Inicial População B: "+populacaoB+" percentual 1.5%");
 		while(populacaoA < populacaoB){
 			ano++; 
-			populacaoA = populacaoA + ((populacaoA*3)/100); 
-			populacaoB = populacaoB + ((populacaoB*1.5)/100);
+			populacaoA += ((populacaoA*3)/100); 
+			populacaoB += ((populacaoB*1.5)/100);
 		} 
 		System.out.println(" Após "+ano+" anos");
 		System.out.println(" População A: "+populacaoA);

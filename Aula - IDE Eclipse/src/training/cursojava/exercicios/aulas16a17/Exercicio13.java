@@ -14,7 +14,7 @@ public class Exercicio13 {
 		int potencia = 1;
 		
 		for (int i = 0; i < expo; i++) {
-			potencia = potencia*base;	
+			potencia *= base;	
 		}
 		System.out.println("Total: "+potencia);
 

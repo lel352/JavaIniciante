@@ -7,14 +7,12 @@ public class Exercicio07 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int numero;
-		int maior = 0;
+		int maior = Integer.MIN_VALUE;
 		for (int i = 0; i < 5; i++) {
 			System.out.print("Numero "+(i+1)+": ");
 			numero = scan.nextInt();
 			maior = (numero > maior)?numero:maior;			
 		}
 		System.out.println("Maior numero: "+maior);
-
 	}
-
 }
