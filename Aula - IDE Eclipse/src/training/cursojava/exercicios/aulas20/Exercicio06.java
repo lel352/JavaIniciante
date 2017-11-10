@@ -104,35 +104,60 @@ public class Exercicio06 {
 			if (jogada >= 9)
 				fim = true;*/
 			
-			if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[0][0] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[2][2]))){ //Diagonal /
+			
+			 if ((jogoVelha[0][0] == 'X' && jogoVelha[0][1] == 'X' && jogoVelha[0][2] == 'X') ||     //linha 1
+	                    (jogoVelha[1][0] == 'X' && jogoVelha[1][1] == 'X' && jogoVelha[1][2] == 'X') || //linha 2
+	                    (jogoVelha[2][0] == 'X' && jogoVelha[2][1] == 'X' && jogoVelha[2][2] == 'X') || //linha 3
+	                    (jogoVelha[0][0] == 'X' && jogoVelha[1][0] == 'X' && jogoVelha[2][0] == 'X') || //coluna 1
+	                    (jogoVelha[0][1] == 'X' && jogoVelha[1][1] == 'X' && jogoVelha[2][1] == 'X') || //coluna 2
+	                    (jogoVelha[0][2] == 'X' && jogoVelha[1][2] == 'X' && jogoVelha[2][2] == 'X') || //coluna 3
+	                    (jogoVelha[0][0] == 'X' && jogoVelha[1][1] == 'X' && jogoVelha[2][2] == 'X') || //diagonal
+	                    (jogoVelha[0][2] == 'X' && jogoVelha[1][1] == 'X' && jogoVelha[2][0] == 'X')){  //diagonal inversa
+	                fim = true;
+	                vencedor = 'X';
+	            } else if ((jogoVelha[0][0] == 'O' && jogoVelha[0][1] == 'O' && jogoVelha[0][2] == 'O') ||     //linha 1
+	                    (jogoVelha[1][0] == 'O' && jogoVelha[1][1] == 'O' && jogoVelha[1][2] == 'O') || //linha 2
+	                    (jogoVelha[2][0] == 'O' && jogoVelha[2][1] == 'O' && jogoVelha[2][2] == 'O') || //linha 3
+	                    (jogoVelha[0][0] == 'O' && jogoVelha[1][0] == 'O' && jogoVelha[2][0] == 'O') || //coluna 1
+	                    (jogoVelha[0][1] == 'O' && jogoVelha[1][1] == 'O' && jogoVelha[2][1] == 'O') || //coluna 2
+	                    (jogoVelha[0][2] == 'O' && jogoVelha[1][2] == 'O' && jogoVelha[2][2] == 'O') || //coluna 3
+	                    (jogoVelha[0][0] == 'O' && jogoVelha[1][1] == 'O' && jogoVelha[2][2] == 'O') || //diagonal
+	                    (jogoVelha[0][2] == 'O' && jogoVelha[1][1] == 'O' && jogoVelha[2][0] == 'O')){  //diagonal inversa
+	            	fim = true;
+	                vencedor = 'O';
+	            } else if (jogada >= 9){
+	                fim = true;	                
+	            }
+			
+			/*if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[0][0] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[2][2]))){ //Diagonal /
 				vencedor = jogoVelha[0][0];
 				fim = true;
 			}
-			else if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[2][0] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[0][2]))){ //diagonal \
+			else if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[2][0] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[0][2]))){ //diagonal \
 				vencedor = jogoVelha[2][0];
 				fim = true;
 			}
-			else if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[0][0] == jogoVelha[1][0]) && (jogoVelha[1][0] == jogoVelha[2][0]))){ //Coluna 1 |
+			else if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[0][0] == jogoVelha[1][0]) && (jogoVelha[1][0] == jogoVelha[2][0]))){ //Coluna 1 |
 				vencedor = jogoVelha[0][0];
 				fim = true;
 			}
-			else if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[0][1] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[2][1]))){ //Coluna 2 |
+			else if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[0][1] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[2][1]))){ //Coluna 2 |
 				vencedor = jogoVelha[0][1];
 				fim = true;
 			}
-			else if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[0][2] == jogoVelha[1][2]) && (jogoVelha[1][2] == jogoVelha[2][2]))){ //Coluna 3 |
+			else if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[0][2] == jogoVelha[1][2]) && (jogoVelha[1][2] == jogoVelha[2][2]))){ //Coluna 3 |
 				vencedor = jogoVelha[0][2];
 				fim = true;
 			}
-			else if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[0][0] == jogoVelha[0][1]) && (jogoVelha[0][1] == jogoVelha[0][2]))){ //Linha 1 -
+			else if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[0][0] == jogoVelha[0][1]) && (jogoVelha[0][1] == jogoVelha[0][2]))){ //Linha 1 -
 				vencedor = jogoVelha[0][0];
 				fim = true;
 			}
-			else if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[1][0] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[1][2]))){ //Linha 2 -
+			else if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[1][0] == jogoVelha[1][1]) && (jogoVelha[1][1] == jogoVelha[1][2]))){ //Linha 2 -
 				vencedor = jogoVelha[0][0];
 				fim = true;
 			}
-			else if (((jogoVelha[0][0] == 'X') || (jogoVelha[0][0] == 'O')) && ((jogoVelha[2][0] == jogoVelha[2][1]) && (jogoVelha[2][1] == jogoVelha[2][2]))){ //Linha 3 -
+			else if (((jogoVelha[linha-1][coluna-1] == 'X') || (jogoVelha[linha-1][coluna-1] == 'O')) && ((jogoVelha[2][0] == jogoVelha[2][1]) && (jogoVelha[2][1] == jogoVelha[2][2]))){ //Linha 3 -
 				vencedor = jogoVelha[0][0];
 				fim = true;  
 			}
@@ -146,7 +171,7 @@ public class Exercicio06 {
 							fim = false;  
 					}
 				}*/
-			}
+			//}*/
 		}while(!fim); 
 		
 		if (vencedor == '1')
